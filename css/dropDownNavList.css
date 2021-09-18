@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: #ffce5d;
+}
+
+header:nth-child(2) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: transparent;
+    z-index: 1;
+    flex-direction: row-reverse;
+}
+
+header:nth-child(2) h1 {
+    margin-left: 25px;
+    color: #000;
+    text-shadow: 1px 1px 2px red;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+header:nth-child(2) a {
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px #ff0000;
+}
+
+@media screen and (max-width: 500px) {
+    header:nth-child(2) h1 {
+        display: none;
+    }
+    header:nth-child(2) {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+header .dropDown_nav_container {
+    width: 100%;
+    max-width: 117rem;
+}
+
+.dropDown_nav_container nav .menu_icon {
+    font-size: 4rem;
+    display: none;
+    color: #eee;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.dropDown_nav_container nav {
+    width: 100%;
+    border-bottom: 1px solid #999;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    color: #eee;
+    font-size: 4rem;
+    display: flex;
+    background: gold;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    /*  margin: 1rem 5rem 0 1rem;*/
+}
+
+.logo i {
+    margin: auto;
+}
+
+.dropDown_nav_container nav .nav_list {
+    display: flex;
+}
+
+.dropDown_nav_container nav .nav_list>li {
+    line-height: 8rem;
+    position: relative;
+}
+
+.sub_menu>li {
+    line-height: 4rem;
+}
+
+.nav_list a {
+    display: block;
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    transition: color 0.65s;
+}
+
+.nav_list a:hover {
+    color: gold;
+}
+
+.sub_menu {
+    position: absolute;
+    display: block;
+    width: 20rem;
+    border-top: 3px solid #fc9d0f;
+    top: 16rem;
+    z-index: 100;
+    background: rgb(46, 36, 65);
+    transition: all 0.65s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sub_menu::before {
+    content: "";
+    border: 1.2rem solid transparent;
+    border-bottom: 1.2rem solid #fc9d0f;
+    position: absolute;
+    top: -2.5rem;
+    left: 3rem;
+}
+
+.sub_menu .sub_menu::before {
+    top: 0.9rem;
+    left: -2.5rem;
+    border: 1.2rem solid transparent;
+    border-right: 1.2rem solid #fc9d0f;
+}
+
+.sub_menu .sub_menu {
+    border-top: none;
+    border-left: 3px solid #fc9d0f;
+    top: 0;
+    left: 160%;
+}
+
+.nav_list li:hover>.sub_menu {
+    opacity: 1;
+    visibility: visible;
+    top: 8rem;
+}
+
+.sub_menu li:hover>.sub_menu {
+    opacity: 1;
+    visibility: visible;
+    left: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    .nav_list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: scroll;
+        background-color: #191919;
+        flex-direction: column;
+        height: 100vh;
+        z-index: 1000;
+        display: none !important;
+        width: 100%;
+    }
+    .nav_list>li {
+        line-height: 4rem;
+    }
+    .sub_menu {
+        border: 3px solid transparent;
+        border-left: 3px solid #fc9d0f;
+        position: initial;
+        margin-left: 1rem;
+        max-height: 0;
+        background-color: #191919;
+        transition: all 650ms ease;
+    }
+    .sub_menu::before {
+        display: none;
+    }
+    .nav_list li:hover>.sub_menu {
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+    nav .menu_icon {
+        display: block !important;
+    }
+    nav .bx-x {
+        display: none;
+    }
+    nav.active .bx-menu {
+        display: none;
+    }
+    nav.active .bx-x {
+        display: block;
+    }
+    nav.active .nav_list {
+        display: block !important;
+    }
+}

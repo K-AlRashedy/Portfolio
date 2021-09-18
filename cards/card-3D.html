@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="../css/card-3D.css">
+    <title>animation</title>
+</head>
+
+<body>
+    <header>
+        <h1>hover on the card and keep moving</h1>
+        <a href="../work.html"> go back</a>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2 class="name">Product name</h2>
+            <a class="buy" href="#">Buy Now</a>
+            <div class="circle"></div>
+            <img class="product" src="../images/Crash.png" alt=""></div>
+    </div>
+    <script src="../js/vanila.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 40,
+            speed: 400
+        });
+    </script>
+</body>
+
+</html>

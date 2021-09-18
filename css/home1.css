@@ -1,0 +1,189 @@
+/* value content start */
+
+#main-img {
+    height: 400px;
+}
+
+.landdown-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.value-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.landdown-content .text {
+    font-size: 30px;
+    max-width: 600px;
+    padding: 20px;
+    margin-left: 30px;
+    text-align: justify;
+}
+
+.value-content .circle {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(300px at 90% 75%);
+    background: linear-gradient(#f8da61, #ff5acd);
+    position: absolute;
+    z-index: -5;
+}
+
+.landdown-content .text h1 {
+    font-size: 50px;
+}
+
+.landdown-content .text p {
+    font-size: 25px;
+}
+
+.landdown-content .img-box {
+    display: flex;
+    align-items: flex-end;
+    max-width: 600px;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.tump li img {
+    height: 60px;
+    margin: 0 30px;
+}
+
+.tump {
+    list-style: none;
+    display: flex;
+    transform: translatex(-50%);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+}
+
+#value-media {
+    width: 20px;
+    height: auto;
+    margin-right: 25px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#value-media ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#value-media ul li {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+#value-media ul li a {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#value-media ul li a .bxl-facebook {
+    color: #fff;
+    background: #008bff;
+    border-radius: 7px;
+}
+
+#value-media ul li a .bxl-whatsapp {
+    background-color: #00ff00;
+    color: #fff;
+    border-radius: 7px;
+}
+
+#value-media ul li a .tele {
+    border-radius: 7px;
+    border: none;
+    background: #fff;
+    width: auto;
+    height: auto;
+}
+
+#value-media ul li a .tele .bxl-telegram {
+    color: #fff;
+    background: #00b4ff;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 25px !important;
+    margin: 0 2px;
+}
+
+#value-media ul li a .bxl-instagram {
+    background: linear-gradient(20deg, #0000ff, #ff65cd, gold);
+    padding: 0;
+    border-radius: 7px;
+    color: #fff;
+}
+
+@media screen and (max-width: 850px) {
+    .landdown-content {
+        flex-direction: column;
+    }
+    .landdown-content .text h1 {
+        font-size: 40px;
+    }
+    .landdown-content .text p {
+        font-size: 20px;
+    }
+    .tump {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .tump img {
+        margin: auto !important;
+    }
+    .landdown-content .img-box {
+        margin: 0 0 70px 0;
+    }
+    .value-content .circle {
+        clip-path: circle(300px at 50% 85%);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 7px !important;
+    }
+    .landdown-content .text h1 {
+        font-size: 30px;
+    }
+    .landdown-content .text p {
+        font-size: 16px;
+    }
+    .tump {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .tump img {
+        margin: auto !important;
+        height: 40px !important;
+    }
+    .value-content .circle {
+        clip-path: circle(280px at 100% 100%);
+    }
+    .landdown-content .img-box {
+        margin: 0 0 70px 0;
+        padding: 0 0 0 0;
+    }
+    .landdown-content .img-box #main-img {
+        height: 200px !important;
+    }
+}
+
+
+/* value content end */

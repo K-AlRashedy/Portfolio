@@ -1,0 +1,100 @@
+body {
+    background-image: url("../images/f6.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+section .wcard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 300px;
+    background-color: rgb(238 238 238 / 60%);
+    border-radius: 15px;
+    padding: 30px;
+    /* margin: 10px; */
+    box-shadow: 1px 1px 10px #000;
+    transform: rotatez(5deg);
+    transition: all 1s ease-in-out;
+}
+
+section .wcard-container:nth-child(even) {
+    transform: rotatez(-5deg);
+}
+
+section .wcard-container:hover {
+    transform: scale(1.3);
+    z-index: 5;
+    box-shadow: 3px 3px 10px #000;
+}
+
+section .wcard-container a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .wcard-container img {
+    max-width: 80%;
+    border-radius: 10px;
+    max-height: 70%;
+}
+
+section .wcard-container h1 {
+    font-size: 30px;
+    color: #000;
+    text-shadow: 1px 1px 2px red;
+    font-weight: bold;
+}
+
+section .wcard-container p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+@media screen and (max-width: 1050px) {
+    section .wcard-container {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    section .wcard-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    section {
+        flex-direction: column;
+    }
+    section .wcard-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        flex-direction: column;
+    }
+    section .wcard-container {
+        width: 90%;
+    }
+}

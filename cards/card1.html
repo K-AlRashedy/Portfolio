@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/card1.css">
+    <title> flipping card split</title>
+</head>
+
+<body>
+    <header>
+        <h1>click on the card</h1>
+        <a href="../work.html">back</a>
+    </header>
+    <div class="card-container" onclick="activation(this)">
+        <div class="card">
+            <div class="front">
+                <div class="circle"></div>
+                <img src="../images/BossBaby.png">
+            </div>
+            <div class="back">
+                <img src="../images/BossBaby.png">
+                <div class="content">
+                    <h1>BOSSBABY</h1>
+                    <p>Now adults, Tim Templeton is a stay-at-home dad for two adorable daughters, while his estranged brother, Ted, is a big-shot CEO. They come together in an unexpected way when they take a magical formula that transforms them into babies
+                        for 48 hours. Joining forces with Tim's secret-agent daughter, they must go under cover to prevent an evil genius from turning fellow toddlers into monstrous brats.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function activation(card_container) {
+            card_container.classList.toggle("active");
+        };
+    </script>
+</body>
+
+</html>
